@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "dJUwHp8dYjux",
+        "outputId": "f2a12a35-97f3-4c49-cd39-ad86685e273f",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 130
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-1-45015de248ff>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    <!DOCTYPE html>\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ],
+      "source": [
+        "<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <link rel=\"stylesheet\" href=\"/static/style.css\">\n",
+        "    <title>Digit Recongizer</title>\n",
+        "</head>\n",
+        "\n",
+        "<body>\n",
+        "    <div class=\"Parent-container\">\n",
+        "        <div class=\"header\">\n",
+        "            <h3 class=\"heading\">IBM PROJECT</h3>\n",
+        "            <div class=\"navbar\">\n",
+        "                <ul>\n",
+        "                    <li><a href=\"{{url_for('index')}}\">Home</a></li>\n",
+        "                    <li><a href=\"{{url_for('web')}}\">Recognize</a></li>\n",
+        "                    <!-- <li><a href=\"/templates/index.html\">Home</a></li>\n",
+        "                    <li><a href=\"/templates/web.html\">Recognize</a></li> -->\n",
+        "                </ul>\n",
+        "            </div>\n",
+        "        </div>\n",
+        "\n",
+        "        <div class=\"background-image\">\n",
+        "            <img src=\"/static/Images/kutty.jpeg\" class=\"image\">\n",
+        "            <div class=\"text\">\n",
+        "                <form action=\"/web\" method=\"POST\" enctype=\"multipart/form-data\">\n",
+        "                    <div class=\"file\">\n",
+        "                        <label>Select a image:</label>\n",
+        "                        <input id=\"image\" type=\"file\" name=\"image\" accept=\"image/png, image/jpeg\" onchange=\"preview()\">\n",
+        "                    </div>\n",
+        "                    <div class=\"image-border\">\n",
+        "                        <img id=\"frame\" class=\"img\" src=\"\" />\n",
+        "                    </div>\n",
+        "                    <div class=\"button\">\n",
+        "                        <button type=\"submit\" class=\"btn\">Predict</button>\n",
+        "                        <button type=\"button\" class=\"btn\" onclick=\"cleardata()\">&nbsp Clear &nbsp</button>\n",
+        "                    </div>\n",
+        "                    <div>\n",
+        "                        <h3>The Number is:{{num}}</h3>\n",
+        "                    </div>\n",
+        "                </form>\n",
+        "            </div>\n",
+        "        </div>  \n",
+        "    </div>\n",
+        "\n",
+        "</body>\n",
+        "\n",
+        "<script>\n",
+        "    function preview() {\n",
+        "        document.getElementById(\"frame\").src = URL.createObjectURL(event.target.files[0]);\n",
+        "    }\n",
+        "\n",
+        "    function cleardata(){\n",
+        "        document.getElementById(\"frame\").src = \"\";\n",
+        "        document.getElementById(\"image\").value = \"\";\n",
+        "    }\n",
+        "\n",
+        "</script>\n",
+        "\n",
+        "</html>"
+      ]
+    }
+  ]
+}
