@@ -1,9 +1,11 @@
 
 # **IBM-Project-8814-1658931745**
 
-# **A Novel Method for Handwritten Digit Recognition System Category**
+# **A Novel Method for Handwritten Digit Recognition System**
 
-Artificial Intelligence
+Category: Artificial Intelligence
+# Skills Required:
+Python,CNN,IBM Cloud,IBM Watson Studio,IBM Cloudant DB,Deep Learning,Python-Flask
 
 # _Project Description:_
 
